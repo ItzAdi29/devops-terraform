@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "eu-west-1"
+  region = "ap-south-1"
 }
 
 resource "aws_security_group" "private-sg" {
@@ -41,5 +41,13 @@ resource "aws_instance" "my-EC2" {
   }
   tags = {
     Name = "x21201188-Test-EC2"
+  }
+}
+
+resource "aws_s3_bucket" "test-bucket" {
+  bucket = "x21201188-devops-tst-buck"
+  acl    = "private"
+  tags = {
+    Name        = "devops-south-tst-buck"
   }
 }
