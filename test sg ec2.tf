@@ -30,7 +30,7 @@ resource "aws_security_group" "private-sg" {
 
 resource "aws_instance" "my-EC2" {
   ami = "ami-09d56f8956ab235b3"
-  instance_type = “t2.micro”
+  instance_type = "t2.micro"
   key_name = "test-key"
  vpc_security_group_ids = [aws_security_group.private-sg.id]
 associate_public_ip_address = true
@@ -39,8 +39,8 @@ associate_public_ip_address = true
     volume_size = "8"
     delete_on_termination = true
   }
- user_data = "${file(“userdata.sh”)}"
+ user_data = "${file("userdata.sh")}"
 tags = {
-    Name = "Test-EC2"
+    Name = "x21201188-Test-EC2"
   }
 }
