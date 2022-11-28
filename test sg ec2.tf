@@ -29,7 +29,7 @@ resource "aws_security_group" "private-sg" {
 }
 
 resource "aws_instance" "my-EC2" {
-  ami = "ami-0e6329e222e662a52"
+  ami = "ami-01cae1550c0adea9c"
   instance_type = "t2.micro"
   key_name = "X21201188-AmzLinux"
   vpc_security_group_ids = [aws_security_group.private-sg.id]
